@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    animal = requests.get("http://localhost:5001/animal")
-    noise = requests.post("http://localhost:5001/noise", data=animal.text)
+    animal = requests.get("http://service2:5001/animal")
+    noise = requests.post("http://service2:5001/noise", data=animal.text)
     
 
 
