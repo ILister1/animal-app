@@ -5,7 +5,7 @@ python3 -m venv testing-venv
 
 . testing-venv/bin/activate
 
-pip3 install -r testing/requirements.txt
+pip3 install -r ./testing/requirements.txt
 
 pytest --cov=service1
 pytest --cov=service2
