@@ -5,25 +5,25 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh "./scripts/test.sh"
+                sh ". ./scripts/test.sh"
             }
         }
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "./scripts/build.sh"
+                sh ". ./scripts/build.sh"
             }
         }
         stage('Push') {
             steps {
                 echo 'Pushing....'
-                sh "./scripts/push.sh"
+                sh ". ./scripts/push.sh"
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh "./scripts/deploy.sh"
+                sh ". ./scripts/deploy.sh"
             }
         }
     }
