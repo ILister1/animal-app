@@ -27,7 +27,7 @@ class TestAnimals(TestBase):
             data='Dog',
             follow_redirects=True
         )
-        self.assertIn(b"Woof", response.data)
+        self.assertIn(b"woof", response.data)
 
     def test_Noise_Cat(self):
         response = self.client.post(
