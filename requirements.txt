@@ -14,5 +14,4 @@ Werkzeug==0.16.1
 gunicorn
 flask-bcrypt
 flask-login
-Flask
 requests

@@ -1,10 +1,17 @@
 version: '3.3'
 services:
   service1:
+    image: isaaclister/animal-app-1
     build: ./service1
     ports:
-      - "5000:5000"
+    - target: 5000
+      published: 5000
+    deploy:
+      replicas: 2
   service2:
+    image: isaaclister/animal-app-2
     build: ./service2
     ports:
-      - "5001:5001"
+    - target: 5001
+    deploy:
+      replicas: 2
