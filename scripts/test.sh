@@ -7,8 +7,12 @@ python3 -m venv testing-venv
 
 pip3 install -r ./requirements.txt
 
-pytest --cov=service1
-pytest --cov=service2
+cd service1
+pytest --cov .
+cd ..
+cd service2
+pytest --cov .
+cd ..
 
 deactivate
 
